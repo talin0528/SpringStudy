@@ -1,5 +1,8 @@
 package com.coderby.myapp.hello.service;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class NiceService implements IHelloService {
 
 	@Override

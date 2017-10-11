@@ -1,6 +1,7 @@
 package com.coderby.myapp.hello.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 import com.coderby.myapp.hello.service.IHelloService;
@@ -9,6 +10,7 @@ import com.coderby.myapp.hello.service.IHelloService;
 public class HelloController {
 	
 	@Autowired
+	@Qualifier("niceService")
 	IHelloService helloService;
 	
 	public void setHelloService(IHelloService helloService) {
