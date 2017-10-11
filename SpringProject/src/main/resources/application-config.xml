@@ -6,6 +6,6 @@
 	<bean id="helloService" class="com.coderby.myapp.hello.service.HelloService" />
 
 	<bean id="helloController" class="com.coderby.myapp.hello.controller.HelloController">
-		<constructor-arg ref="helloService"></constructor-arg>
+		<property name="helloService" ref="helloService"/>
 	</bean>
 </beans>

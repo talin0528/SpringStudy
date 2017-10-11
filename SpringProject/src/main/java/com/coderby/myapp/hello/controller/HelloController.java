@@ -5,7 +5,7 @@ import com.coderby.myapp.hello.service.IHelloService;
 public class HelloController {
 	IHelloService helloService;
 	
-	public HelloController(IHelloService helloService) {
+	public void setHelloService(IHelloService helloService) {
 		this.helloService = helloService;
 	}
 	
