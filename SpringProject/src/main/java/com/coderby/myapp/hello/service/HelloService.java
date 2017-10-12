@@ -14,7 +14,12 @@ public class HelloService implements IHelloService {
 
 	@Override
 	public String sayGoodbye(String name) {
+		System.out.println("HelloService.sayGoodbye() 실행");
 		String message = "Goodbye, " + name;
+		if(Math.random() < 0.5) {
+			throw new RuntimeException("Goodbye Exception");
+		}
+		
 		return message;
 	}
 

@@ -11,7 +11,9 @@ public class HelloMain {
 		AbstractApplicationContext context = new GenericXmlApplicationContext("application-config.xml");
 		HelloController controller = context.getBean("helloController", HelloController.class);
 		controller.hello("자일리톨");
-		context.close();
+		System.out.println();
+		controller.goodbye("덴마크밀크");
+				context.close();
 	}
 
 }
