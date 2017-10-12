@@ -10,11 +10,15 @@
 	<context:component-scan base-package="com.coderby.myapp.hello"></context:component-scan>
 
 	<bean id="helloLog" class="com.coderby.myapp.util.HelloLog" />
+	<bean id="performanceAspect" class="com.coderby.myapp.hello.aop.PerformanceAspect" />
 	
 	<aop:config>
 		<aop:pointcut id="hello" expression="execution(* com.coderby..HelloService.sayHello(..))" />
 		<aop:aspect ref="helloLog">
 			<aop:before pointcut-ref="hello" method="log"/>
+		</aop:aspect>
+		<aop:aspect ref="performanceAspect">
+			<aop:around pointcut-ref="hello" method="trace" />
 		</aop:aspect>
 	</aop:config>
 </beans>
