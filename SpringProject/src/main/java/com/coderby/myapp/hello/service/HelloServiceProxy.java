@@ -2,14 +2,14 @@ package com.coderby.myapp.hello.service;
 
 import org.springframework.stereotype.Service;
 
-@Service
-public class HelloService implements IHelloService {
+import com.coderby.myapp.util.HelloLog;
 
+@Service
+public class HelloServiceProxy extends HelloService {
 	@Override
 	public String sayHello(String name) {
-		//HelloLog.log();
-		String message = "Hello, " + name;
-		return message;
+		HelloLog.log();
+		return super.sayHello(name);
 	}
 
 	@Override

@@ -1,6 +1,7 @@
 package com.coderby.myapp.hello.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.annotation.Resource;
+
 import org.springframework.stereotype.Controller;
 
 import com.coderby.myapp.hello.service.IHelloService;
@@ -8,7 +9,7 @@ import com.coderby.myapp.hello.service.IHelloService;
 @Controller
 public class HelloController {
 	
-	@Autowired
+	@Resource(name="helloServiceProxy")
 	IHelloService helloService;
 	
 	public void setHelloService(IHelloService helloService) {
