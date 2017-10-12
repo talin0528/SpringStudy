@@ -9,7 +9,7 @@ import com.coderby.myapp.hello.service.IHelloService;
 @Controller
 public class HelloController {
 	
-	@Resource(name="helloServiceProxy")
+	@Resource(name="helloService")
 	IHelloService helloService;
 	
 	public void setHelloService(IHelloService helloService) {

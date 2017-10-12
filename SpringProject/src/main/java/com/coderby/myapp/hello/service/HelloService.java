@@ -7,7 +7,6 @@ public class HelloService implements IHelloService {
 
 	@Override
 	public String sayHello(String name) {
-		//HelloLog.log();
 		String message = "Hello, " + name;
 		return message;
 	}
